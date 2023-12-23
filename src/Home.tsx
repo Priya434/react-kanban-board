@@ -1,7 +1,9 @@
 // import './App.css'
 import "./styles/Module.Home.css"
-import Ticket from './components/Ticket.tsx'
+// import Ticket from './components/Ticket.tsx'
 import { useEffect, useState } from 'react';
+import PrioritySection from "./components/PrioritySection.tsx";
+import PriorityGroup from "./components/PriorityGroup.tsx";
 
 export interface TicketDetailsType {
     id: string;
@@ -30,10 +32,6 @@ function Home() {
     const [apiData, setapiData] = useState<ApiDataType>();
 
     async function fetchApiData() {
-        // fetch(apiUrl)
-        //   .then(response => response.json())
-        //   .then(data => setapiData(data))
-        //   .catch(error => console.error('Error:', error));
 
         fetch(apiUrl)
             .then(response => {
@@ -43,12 +41,7 @@ function Home() {
                 return response.json();
             })
             .then(data => {
-                // Process data from the first API
-                // console.log('Data from API:', data);
                 setapiData(data)
-
-                // Fetch data from the second API endpoint
-                // return fetch(apiUrl2);
             })
     }
 
@@ -57,10 +50,15 @@ function Home() {
     }, [])
 
     return (
+        // <div className="body">
+        //     {apiData ? apiData.tickets.map((data) => (
+        //         <Ticket key={data.id} {...data} />
+        //     )) : null}
+        // </div>
+
         <div className="body">
-            {apiData ? apiData.tickets.map((data) => (
-                <Ticket key={data.id} {...data} />
-            )) : null}
+            {/* <Section priority={1} /> */}
+            <PriorityGroup />
         </div>
     )
 }

@@ -1,8 +1,8 @@
 // import './App.css'
 import "./styles/Module.Home.css"
 // import Ticket from './components/Ticket.tsx'
-import { useEffect, useState } from 'react';
-import PrioritySection from "./components/PrioritySection.tsx";
+// import { useEffect, useState } from 'react';
+// import PrioritySection from "./components/PrioritySection.tsx";
 import PriorityGroup from "./components/PriorityGroup.tsx";
 
 export interface TicketDetailsType {
@@ -27,27 +27,27 @@ export interface ApiDataType {
 
 function Home() {
 
-    const apiUrl = "https://tfyincvdrafxe7ut2ziwuhe5cm0xvsdu.lambda-url.ap-south-1.on.aws/ticketAndUsers";
+    // const apiUrl = "https://tfyincvdrafxe7ut2ziwuhe5cm0xvsdu.lambda-url.ap-south-1.on.aws/ticketAndUsers";
 
-    const [apiData, setapiData] = useState<ApiDataType>();
+    // const [apiData, setapiData] = useState<ApiDataType>();
 
-    async function fetchApiData() {
+    // async function fetchApiData() {
 
-        fetch(apiUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                setapiData(data)
-            })
-    }
+    //     fetch(apiUrl)
+    //         .then(response => {
+    //             if (!response.ok) {
+    //                 throw new Error('Network response was not ok');
+    //             }
+    //             return response.json();
+    //         })
+    //         .then(data => {
+    //             setapiData(data)
+    //         })
+    // }
 
-    useEffect(() => {
-        fetchApiData();
-    }, [])
+    // useEffect(() => {
+    //     fetchApiData();
+    // }, [])
 
     return (
         // <div className="body">

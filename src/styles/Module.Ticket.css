@@ -34,7 +34,7 @@
 }
 
 .card-priority-2 {
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.292);
 }
 
 .card-priority-3 {
@@ -42,10 +42,15 @@
 }
 
 .card-priority-4 {
-    background-color: red;
+    background-color: #ffb9b9;
 }
 
 .card-tag {
     display: flex;
     align-items: center;
+}
+
+.card-userId {
+    border: 1px solid #e6e7eb;
+    padding: 2px;
 }

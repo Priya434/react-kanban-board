@@ -1,5 +1,5 @@
 import "../styles/Module.Ticket.css"
-import { TicketDetailsType } from "../App.tsx";
+import { TicketDetailsType } from "../Home.tsx";
 
 const users = [
     { id: "usr-1", name: "Anoop sharma", available: false }, { id: "usr-2", name: "Yogesh", available: true }, { id: "usr-3", name: "Shankar Kumar", available: true }, { id: "usr-4", name: "Ramesh", available: true }, { id: "usr-5", name: "Suresh", available: true }]
